@@ -10,7 +10,6 @@ polka() // You can also use Express
   .use(
     compression({ threshold: 0 }),
     sirv("static", { dev }),
-    sirv("images", { dev }),
     sapper.middleware()
   )
   .listen(PORT, err => {
