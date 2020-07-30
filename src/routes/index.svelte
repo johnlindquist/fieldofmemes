@@ -12,9 +12,7 @@
 </script>
 
 <style>
-  h1,
-  figure,
-  p {
+  h1 {
     text-align: center;
     margin: 0 auto;
   }
@@ -26,9 +24,6 @@
     margin: 0 0 0.5em 0;
   }
 
-  figure {
-    margin: 0 0 1em 0;
-  }
 
   img {
     width: 100%;
@@ -36,15 +31,11 @@
     margin: 0 0 1em 0;
   }
 
-  p {
-    margin: 1em auto;
+  .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
   }
 
-  @media (min-width: 480px) {
-    h1 {
-      font-size: 4em;
-    }
-  }
 </style>
 
 <svelte:head>
@@ -53,7 +44,7 @@
 
 <h1>Field of Memes</h1>
 
-<div>
+<div class="container">
   {#each images as image}
     <img src={image} alt="" />
   {/each}
