@@ -46,6 +46,6 @@
 
 <div class="container">
   {#each images as image}
-    <img src={image} alt="" />
+    <img src={image} alt="" loading="lazy" />
   {/each}
 </div>
